@@ -1,0 +1,22 @@
+@mixin std-box ($width, $padding) {
+  width: $width;
+  border: none;
+  padding: $padding;
+}
+
+@mixin std-img () {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  max-width: 100%; 
+}
+
+@mixin std-col ($col-color, $flex-basis) {
+  &.theme {
+    background-color: $col-color;
+  }
+  @media (min-width: $tablet-size){
+    flex-basis: $flex-basis;
+  }
+}

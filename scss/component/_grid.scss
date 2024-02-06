@@ -1,0 +1,100 @@
+/* ============================================= */
+/*              Grid System                      */
+/* ============================================= */
+
+.container {
+  padding: 0 10px;
+  @media (min-width: $tablet-size) {
+    max-width: 1400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 10px;
+  @media (min-width: $tablet-size) {
+    flex-direction: row;
+  }
+}
+
+[class^=col] {
+  margin-top: 10px;
+  flex-basis: 100%;
+  min-height: 25px;
+  padding: 10px;
+  border-radius: 5px;
+  @media (min-width: $tablet-size) {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    align-items: center;
+    + [class^=col] {
+      margin-left: 10px;
+    }
+  }
+}
+
+.col-1 {
+  @include std-col($info-color, 8.33%);
+}
+
+.col-2 {
+  @include std-col($warning-color, 16.67%);
+}
+
+.col-3 {
+  @include std-col(#deb2ee, 25.00%);
+}
+
+.col-4 {
+  @include std-col(#7ee6fd, 33.33%);
+}
+
+.col-5 {
+  @include std-col(#88d9a0, 41.67%);
+}
+
+.col-6 {
+  @include std-col(#4da2bb, 50.00%);
+}
+
+.col-7 {
+  @include std-col(#ec9fa3, 58.33%);
+}
+
+.col-8 {
+  @include std-col(#fd9f85, 66.67%);
+}
+
+.col-9 {
+  @include std-col($error-color, 75.00%);
+}
+
+.col-10 {
+  @include std-col($success-color, 83.33%);
+}
+
+.col-11 {
+  @include std-col(#51ddfc, 91.67%);
+}
+
+.col-12 {
+  @include std-col(#80e8d1, 100%);
+}
+
+.card {
+  flex-basis: 100%;
+}
+
+.centered {
+  @media (min-width: $tablet-size) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+  
