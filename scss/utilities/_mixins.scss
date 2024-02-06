@@ -22,7 +22,7 @@
 }
 
 @mixin std-btm ($btn-color, $light-val:15%) {
-  transition: background-color 0.3s ease;
+  transition: background-color 1s;
   &:hover {
     background-color: lighten($btn-color, $light-val);
   }
